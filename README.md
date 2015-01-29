@@ -18,12 +18,12 @@ And then execute:
 
 This gem is a Railtie plugin. It doesn't require any special configuration.
 
-When the Rails application starts it will pick up any environment variable matching a name like __RAILS_CONFIG.foo.bar__ and apply the value to the corresponding Rails configuration.
+When the Rails application starts it will pick up any environment variable matching a name like **RAILS_CONFIG__foo__bar** and apply the value to the corresponding Rails configuration.
 
 For example:
 
 ```
-RAILS_CONFIG.action_mailer.smtp_settings.address=smtpserver.yourdomain.com
+RAILS_CONFIG__action_mailer__smtp_settings__address=smtpserver.yourdomain.com
 ```
 
 ## Contributing

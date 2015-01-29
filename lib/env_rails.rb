@@ -4,8 +4,8 @@ module EnvRails
   class Railtie < Rails::Railtie
     config.after_initialize do
       ENV.each do |key, value|
-        if key =~ /\ARAILS_CONFIG((\.[a-z_]+)+)\Z/
-          config_path = $1.split('.')[1 .. -1]
+        if key =~ /\ARAILS_CONFIG((__[a-z_]+)+)\Z/
+          config_path = $1.split('__')[1 .. -1]
           parameter_name = config_path.pop
 
           # Find or create the parameter container
