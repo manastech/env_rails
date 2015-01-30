@@ -2,7 +2,7 @@ require "env_rails/version"
 
 module EnvRails
   class Railtie < Rails::Railtie
-    config.after_initialize do
+    config.before_initialize do
       ENV.each do |key, value|
         if key =~ /\ARAILS_CONFIG((__[a-z_]+)+)\Z/
           config_path = $1.split('__')[1 .. -1]
